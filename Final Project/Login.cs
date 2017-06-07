@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Final_Project
 {
@@ -63,9 +64,65 @@ namespace Final_Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Main_Form f = new Main_Form();
-            f.Show();
-            this.Hide();
+            if (txtUsername.Text != "Username")
+            {
+                if (txtPassword.Text != "Password")
+                {
+                    bool login = false;
+                    string username, password;
+                    string inUsername, inPassword;
+                    inUsername = txtUsername.Text;
+                    inPassword = txtPassword.Text;
+
+                    OleDbDataReader reader = Program.readData("SELECT  UserName, Password FROM tblStaff");
+
+                    while (reader.Read())
+                    {
+                        username = reader[0].ToString();
+                        password = reader[1].ToString();
+
+                        if (username.Equals(inUsername) && password.Equals(inPassword))
+                        {
+                            login = true;
+                            break;
+                        }
+                    }
+                    reader.Close();
+                    Program.con.Close();
+
+                    if (login)
+                    {
+                        Main_Form f = new Main_Form();
+                        f.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Username or Password!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUsername.Clear();
+                        txtPassword.Clear();
+                        txtUsername_Leave(sender, e);
+                        txtPassword_Leave(sender, e);
+                        txtUsername.Focus();
+                    }
+                }
+                else
+                {
+                    txtPassword.BackColor = Color.Red;
+                    MessageBox.Show("Please input Password!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtPassword.BackColor = Color.White;
+                    txtPassword.SelectAll();
+                    txtPassword.Focus();
+                }
+            }
+            else
+            {
+                txtUsername.BackColor = Color.Red;
+                MessageBox.Show("Please input Username!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtUsername.BackColor = Color.White;
+                txtUsername.SelectAll();
+                txtUsername.Focus();
+            }            
         }
     }
 }
