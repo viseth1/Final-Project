@@ -35,15 +35,14 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,20 +98,11 @@
             // dataSetupToolStripMenuItem
             // 
             this.dataSetupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productToolStripMenuItem,
             this.productToolStripMenuItem1,
             this.productToolStripMenuItem2});
             this.dataSetupToolStripMenuItem.Name = "dataSetupToolStripMenuItem";
             this.dataSetupToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.dataSetupToolStripMenuItem.Text = "Data Setup";
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productToolStripMenuItem.Image")));
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.productToolStripMenuItem.Text = "Privilege";
-            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem1
             // 
@@ -138,6 +128,13 @@
             this.sellToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.sellToolStripMenuItem.Text = "Transaction";
             // 
+            // sellToolStripMenuItem1
+            // 
+            this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
+            this.sellToolStripMenuItem1.Size = new System.Drawing.Size(108, 26);
+            this.sellToolStripMenuItem1.Text = "Sell";
+            this.sellToolStripMenuItem1.Click += new System.EventHandler(this.sellToolStripMenuItem1_Click);
+            // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -145,6 +142,12 @@
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // sellReportToolStripMenuItem
+            // 
+            this.sellReportToolStripMenuItem.Name = "sellReportToolStripMenuItem";
+            this.sellReportToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.sellReportToolStripMenuItem.Text = "Sell Report";
             // 
             // helpToolStripMenuItem
             // 
@@ -160,19 +163,6 @@
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.aboutUsToolStripMenuItem.Text = "About Us";
-            // 
-            // sellToolStripMenuItem1
-            // 
-            this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
-            this.sellToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.sellToolStripMenuItem1.Text = "Sell";
-            this.sellToolStripMenuItem1.Click += new System.EventHandler(this.sellToolStripMenuItem1_Click);
-            // 
-            // sellReportToolStripMenuItem
-            // 
-            this.sellReportToolStripMenuItem.Name = "sellReportToolStripMenuItem";
-            this.sellReportToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.sellReportToolStripMenuItem.Text = "Sell Report";
             // 
             // Main_Form
             // 
@@ -201,7 +191,6 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSetupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sellToolStripMenuItem;
